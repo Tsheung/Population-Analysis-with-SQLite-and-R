@@ -307,7 +307,9 @@ than when the 'World' was considered the population max.
 
     SELECT name, population from facts WHERE Name IS NOT 'World' AND population != 0 ORDER BY population DESC LIMIT 5
 
+```{r}
 ggplot(aes(x= name, y= population), data = mydataframe) + geom_bar(aes(fill = name),stat = 'identity') + ggtitle("Top 5 Countries' Populations of the World") + xlab("Highest Populated Countries") + ylab("Population Number") + scale_fill_discrete(name = "Countries")
+```
 
 ![](SQL_DataQuest_Project_files/figure-markdown_strict/unnamed-chunk-11-1.png)
 
